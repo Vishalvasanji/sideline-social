@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Runs only when changes are pushed to 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Project (Optional)
+      run: |
+        echo "Skipping build step for static site"
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages  # Deploy to the 'gh-pages' branch
+        folder: .  # The folder that contains the static site (use 'dist' if using a build step)
+
