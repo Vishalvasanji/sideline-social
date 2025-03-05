@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sideline Social - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .logo-font {
+            font-family: 'League Spartan', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex flex-col min-h-screen text-center p-2">
+    
+    <!-- Header -->
+    <header class="flex items-center w-full px-4 py-3 bg-black md:px-12 md:py-3">
+        <div class="flex items-center gap-[96px] w-full">
+            
+            <h1 class="text-3xl md:text-4xl font-bold logo-font flex-shrink-0 self-center">
+                Sideline<span class="font-normal">Social</span>
+            </h1>
+            <nav id="menu" class="hidden md:flex gap-[96px]">
+            
+            <!-- Navigation -->
+            <nav id="menu" class="hidden md:flex gap-[48px]">
+                <a href="#" class="block text-white hover:text-gray-400">About</a>
+                <a href="#" class="block text-white hover:text-gray-400">Teams</a>
+                <a href="#" class="block text-white hover:text-gray-400">Shop</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-[30px] h-[30px] text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </header>
+    
+    <!-- Body -->
+    <section class="w-full h-[400px] md:h-screen flex flex-col items-center justify-center text-center px-4 md:px-12 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center filter grayscale" style="background-image: url('assets/images/hero-image-parents-cheering.png');"></div>
+        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <div class="relative z-10">
+        <h2 class="text-4xl md:text-6xl font-bold">Welcome to Sideline Social</h2>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl">Celebrating the spirit of youth sports and the community that makes it all possible.</p>
+        <a href="#" class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md text-lg">Learn More</a>
+    </section>
+    
+    <main class="flex-grow flex flex-col items-center justify-center">
+        <p class="mt-6 text-lg md:text-2xl">We're building something exciting. Stay tuned!</p>
+        
+        <form class="mt-6 flex flex-col md:flex-row gap-2">
+            <input type="email" placeholder="Enter your email" class="p-3 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold p-3 rounded-md">Notify Me</button>
+        </form>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-6 flex justify-center gap-4">
+        <a href="#" class="text-blue-400 hover:text-blue-300">Facebook</a>
+        <a href="#" class="text-blue-400 hover:text-blue-300">Twitter</a>
+        <a href="#" class="text-blue-400 hover:text-blue-300">Instagram</a>
+    </footer>
+    
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
