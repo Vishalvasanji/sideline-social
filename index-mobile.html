@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Updated viewport meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Sideline Social - Coming Soon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/bbf4e5e8d5.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'League Spartan', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .bg-gradient-white {
+      background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+      color: #000;
+    }
+    .bg-gradient-black {
+      background: linear-gradient(to bottom, #000000, #111111);
+      color: #fff;
+    }
+    .hero-bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      /* Background image moved from inline style below */
+      background-image: url('assets/images/hero-image-parents-cheering.png');
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="w-full flex items-center px-4 sm:px-6 md:px-12 py-4 bg-white text-black sticky top-0 z-30">
+    <h1 class="text-4xl font-bold">Sideline<span class="font-normal">Social</span></h1>
+    <nav class="hidden md:flex gap-8 ml-0 md:ml-32">
+      <a href="about.html" class="text-black hover:text-gray-600 text-lg">ABOUT</a>
+      <a href="#signup" class="text-black hover:text-gray-600 text-lg">CONTACT</a>
+    </nav>
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-black text-3xl ml-auto focus:outline-none">
+      ☰
+    </button>
+  </header>
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden flex flex-col items-center gap-4 mt-4 md:hidden">
+    <a href="about.html" class="text-black text-lg">ABOUT</a>
+    <a href="#signup" class="text-black text-lg">CONTACT</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section 
+    id="hero"
+    class="hero-bg relative w-full min-h-screen md:h-screen flex items-center justify-center text-white overflow-hidden"
+  >
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <!-- Updated Hero Container: responsive padding & grid -->
+    <div class="relative z-10 w-full max-w-full px-4 sm:px-6 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="col-span-1"></div>
+      <div class="flex flex-col justify-center text-left col-span-1 space-y-8">
+        <!-- Updated heading text sizes and margins -->
+        <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mt-4 md:mt-16">Gear Up.<br>Embrace the Moments.</h2>
+        <p class="text-2xl break-words">
+          Game days to road trips, every moment tells a story. Our premium fan apparel celebrates the dedication, sacrifice, and lifetime bonds of sports families.
+        </p>
+        <a href="#signup" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-md text-2xl inline-block self-start">
+          Team Up With Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Fabric of Team Spirit Section -->
+  <section id="about" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-gradient-black">
+    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 mt-12">The Fabric of Team Spirit.</h2>
+    <div class="w-full grid grid-cols-1 md:grid-cols-7 gap-12 items-center">
+      <div class="col-span-1 md:col-span-3 text-4xl text-left">
+        <p class="text-4xl break-words">
+          Sideline Social is more than merch. It's the backdrop to every victory, every high-five, and every shared moment.
+        </p>
+        <a 
+          href="about.html" 
+          class="mt-16 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-md text-2xl inline-block"
+        >
+          Our Story
+        </a>
+      </div>
+      <div class="col-span-1 md:col-span-4 relative w-full aspect-video">
+        <iframe 
+          class="w-full h-full rounded-md" 
+          src="https://www.youtube.com/embed/T2QWhXpnT5I" 
+          title="Sideline Social Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>     
+  </section>
+
+  <!-- The Sideline Way Section -->
+  <section id="teams" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-gradient-white">
+    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 mt-12">The Sideline Way.</h2>
+
+    <!-- 1) Crafted Designs That Stand Out -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
+      <div>
+        <img 
+          src="assets/images/designs.png" 
+          alt="Crafted Designs" 
+          class="w-full h-auto max-w-xs sm:max-w-md md:max-w-full rounded-md shadow-lg mx-auto"
+        >
+      </div>
+      <div class="flex flex-col">
+        <h3 class="text-4xl font-bold mb-4">Crafted Designs That Stand Out.</h3>
+        <p class="text-2xl leading-relaxed break-words">
+          Sideline Social ensures your team's style is elevated 
+          with designs that are unique. Every piece showcases 
+          fashion-forward, thoughtfully crafted designs that make your team look and feel 
+          confident. From bold patterns to subtle touches, we help you stand out in the crowd.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2) Hassle-Free Revenue Generation -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mb-24">
+      <div class="order-2 md:order-1 flex flex-col">
+        <h3 class="text-4xl font-bold mb-4">Hassle-Free Revenue Generation.</h3>
+        <p class="text-2xl leading-relaxed break-words">
+          Generate income with zero hassles. We handle everything from design to production to fulfillment. Sideline Social builds and manages your 
+          online merch store so you can focus on the field. Build pride and unity while generating extra funds.
+        </p>
+      </div>
+      <div class="order-1 md:order-2">
+        <img 
+          src="assets/images/dpd.png" 
+          alt="Hassle-Free Revenue" 
+          class="w-full h-auto rounded-md shadow-lg mx-auto"
+        >
+      </div>
+    </div>
+
+    <!-- 3) Shop Anytime With No MOQs -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <div>
+        <img 
+          src="assets/images/shop.png" 
+          alt="Shop Anytime" 
+          class="w-full h-auto rounded-md shadow-lg mx-auto"
+        >
+      </div>
+      <div class="flex flex-col">
+        <h3 class="text-4xl font-bold mb-4">Shop Anytime.</h3>
+        <p class="text-2xl leading-relaxed break-words">
+          Get the gear you need when you want it. Fans can easily order items year-round with no minimum orders. Enjoy convenience 
+          and flexibility while letting team pride grow and the passion to shine.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="w-full px-4 sm:px-6 md:px-24 py-32 bg-gradient-black">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 items-center text-white">
+      <div class="col-span-1 md:col-span-3 text-left max-w-3xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mt-12">Secure Your Team Merch Before We Launch!</h2>
+        <p class="text-2xl leading-relaxed break-words max-w-2xl mt-10">
+          Be one of the first teams to get pro-level fan gear. Reserve your spot today—limited early access available!
+        </p>
+      </div>
+      <div class="col-span-1 flex justify-end">
+        <a 
+          href="#signup" 
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-md text-2xl self-start mt-8"
+        >
+          Reserve Your Spot
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="w-full px-4 sm:px-6 md:px-24 py-32 bg-gradient-white text-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold text-center mb-16 mt-12">Premium Apparel.<br>Hassle-Free.</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-24">
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-palette text-6xl"></i>
+          <p class="text-4xl break-words mt-4">Pro Designs</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-shirt text-6xl"></i>
+          <p class="text-4xl break-words mt-4">Quality Products</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-store text-6xl"></i>
+          <p class="text-4xl break-words mt-4">Merch Store</p>
+        </div>
+        <div class="flex flex-col items-center mt-12">
+          <i class="fa-solid fa-dollar-sign text-6xl"></i>
+          <p class="text-4xl break-words mt-4">Profit Sharing</p>
+        </div>
+        <div class="flex flex-col items-center mt-12">
+          <i class="fa-solid fa-calendar-days text-6xl"></i>
+          <p class="text-4xl break-words mt-4">Shop Anytime</p>
+        </div>
+        <div class="flex flex-col items-center mt-12">
+          <i class="fa-solid fa-ban text-6xl"></i>
+          <p class="text-4xl break-words mt-4">No Minimums</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revenue Sharing Section -->
+  <section class="w-full px-4 sm:px-6 md:px-24 py-32 bg-gradient-black text-center">
+    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-12 mt-12">Earn on Every Sale.</h2>
+    <p class="text-2xl leading-relaxed break-words mb-8">
+      Generate revenue for your organization for every item purchased through Sideline Social.
+    </p>
+    <a 
+      href="#signup" 
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-md text-2xl inline-block mt-10"
+    >
+      Start Earning Today
+    </a>
+  </section>
+
+  <!-- Signup Form Section with Data Validators -->
+  <section id="signup" class="w-full px-4 sm:px-6 md:px-24 py-16 md:py-32 bg-gradient-white text-black">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold">Elevate your brand.<br>On and off the field.</h2>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Left Column: Content -->
+      <div class="space-y-6">
+        <p class="text-2xl leading-relaxed break-words">
+          Ready to take your team's gear to the next level? Join Sideline Social today and wear your passion proudly.
+        </p>
+        <p class="text-2xl leading-relaxed break-words">
+          Say goodbye to the challenges of designing and approving apparel, meeting minimum order quantities, collecting payments, and distributing products. With Sideline Social's fashion-forward designs, fully-managed e-commerce store, and easy profit-sharing model, we handle every detail for you.
+        </p>
+      </div>
+      <!-- Right Column: Sign-Up Form with responsive width constraints -->
+      <form id="signup-form" class="w-full max-w-xs sm:max-w-md md:max-w-lg flex flex-col space-y-6 bg-white p-8 shadow-lg rounded-lg" novalidate>
+        <!-- Name Field -->
+        <input type="text" name="name" placeholder="Name" required class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+        
+        <!-- Organization/Team Name Field -->
+        <input type="text" name="team" placeholder="Organization/Team Name" required class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+        
+        <!-- Number of Teams and Sport Fields -->
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" name="num_teams" placeholder="# of Teams" required pattern="^[1-9]\d*$" title="Please enter a positive number." class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+          <input type="text" name="sport" placeholder="Sport" required class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+        </div>
+        
+        <!-- Email Field -->
+        <input type="email" name="email" placeholder="Email Address" required class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+        
+        <!-- Submit Button -->
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg shadow-md text-xl">
+          Claim Your Spot
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Mission Statement Section -->
+  <section id="story" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-black text-center">
+    <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-16 mt-12">Sideline<span class="font-normal">Social</span></h2>
+    <p class="text-2xl leading-relaxed break-words max-w-2xl mx-auto">
+      "Sideline Social embodies the heart and soul of competitive youth sports—the relationships, traditions, and shared experiences that transcend the field. We want to create quality apparel that honors the support from the sideline--the parents, the families, the friends--that make it all possible. Our products celebrate not just athletic performance, but the extraordinary community that makes the entire journey meaningful."
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 px-4 sm:px-6 bg-gradient-black text-white text-center">
+    <div class="text-xl space-y-4">
+      <p>@shopsideline.social</p>
+      <p>
+        <a href="mailto:hello@shopsideline.social" class="text-blue-400 hover:text-blue-300">
+          hello@shopsideline.social
+        </a>
+      </p>
+      <p>&copy; 2025 Sideline Social</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- JavaScript for Form Submission to Google Sheets -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('signup-form');
+      // Use your new web app URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwnSc4aAJVF-NGbksdGSaoWgsHyxun0DVbuzRkbjFfk3o8yNTyApcZlIqzWcry2p-B6nQ/exec';
+      
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const formData = new FormData(form);
+          
+          // Send the form data to Google Sheets using fetch
+          fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success!', data);
+              form.innerHTML = `
+                <div class="text-center p-8">
+                  <h3 class="text-2xl font-bold mb-4">Thanks for signing up!</h3>
+                  <p class="text-lg">We'll be in touch soon with more information.</p>
+                </div>
+              `;
+            })
+            .catch(error => {
+              console.error('Error!', error);
+              form.insertAdjacentHTML('beforeend', `
+                <div class="text-center text-red-500 mt-4">
+                  <p>Oops, something went wrong. Please try again later.</p>
+                </div>
+              `);
+            });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
