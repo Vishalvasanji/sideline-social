@@ -243,8 +243,9 @@
       
       <!-- Number of Teams Field -->
       <div class="grid grid-cols-2 gap-4">
-        <input type="number" name="num_teams" placeholder="# of Teams" required min="1" class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
-        <!-- Sport Field -->
+        <input type="text" name="num_teams" placeholder="# of Teams" required pattern="^[1-9]\d*$" title="Please enter a positive number." class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
+        
+      <!-- Sport Field -->
         <input type="text" name="sport" placeholder="Sport" required class="border border-gray-300 p-4 rounded-lg shadow-md text-lg w-full">
       </div>
       
