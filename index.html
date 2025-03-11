@@ -272,43 +272,41 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Form Submission -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('signup-form');
-      if (form) {
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
-          const formData = new FormData(form);
-          const templateParams = {
-  		name: formData.get('name'),
-  		team: formData.get('team'),
-  		email: formData.get('email'),
-  		num_teams: formData.get('num_teams'),
-  		sport: formData.get('sport')
-	  };
-
-          
-          emailjs.send('service_z50h4x5', 'template_a283izl', templateParams)
-            .then(function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-              form.innerHTML = `
-                <div class="text-center p-8">
-                  <h3 class="text-2xl font-bold mb-4">Thanks for signing up!</h3>
-                  <p class="text-lg">We'll be in touch soon with more information.</p>
-                </div>
-              `;
-            }, function(error) {
-              console.error('FAILED...', error);
-              form.insertAdjacentHTML('beforeend', `
-                <div class="text-center text-red-500 mt-4">
-                  <p>Oops, something went wrong. Please try again later.</p>
-                </div>
-              `);
-            });
-        });
-      }
-    });
-  </script>
+<!-- JavaScript for Form Submission to Google Sheets -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('signup-form');
+    // Use your new web app URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwnSc4aAJVF-NGbksdGSaoWgsHyxun0DVbuzRkbjFfk3o8yNTyApcZlIqzWcry2p-B6nQ/exec';
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        
+        // Send the form data to Google Sheets using fetch
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success!', data);
+            form.innerHTML = `
+              <div class="text-center p-8">
+                <h3 class="text-2xl font-bold mb-4">Thanks for signing up!</h3>
+                <p class="text-lg">We'll be in touch soon with more information.</p>
+              </div>
+            `;
+          })
+          .catch(error => {
+            console.error('Error!', error);
+            form.insertAdjacentHTML('beforeend', `
+              <div class="text-center text-red-500 mt-4">
+                <p>Oops, something went wrong. Please try again later.</p>
+              </div>
+            `);
+          });
+      });
+    }
+  });
+</script>
 </body>
 </html>
