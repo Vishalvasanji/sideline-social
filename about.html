@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Updated viewport meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>About Us</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/bbf4e5e8d5.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'League Spartan', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .hero-bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-image: url('assets/images/girls-soccer-celebrating.png');
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="w-full bg-white text-black sticky top-0 z-30">
+    <div class="relative flex items-center justify-center md:justify-between px-4 sm:px-6 md:px-12 py-4">
+      <button id="menu-toggle" class="absolute left-4 md:hidden text-3xl focus:outline-none w-12 text-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a href="index.html" class="text-4xl font-bold text-center md:text-left">
+        Sideline<span class="font-normal">Social</span>
+      </a>
+      <nav class="hidden md:flex gap-8">
+        <a href="about.html" class="hover:text-gray-600 text-lg">ABOUT</a>
+        <a href="contact.html" class="hover:text-gray-600 text-lg">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-white text-black transform -translate-y-full transition-transform duration-300 ease-in-out z-20">
+    <nav class="flex justify-center items-center h-16">
+      <a href="about.html" class="mx-4 text-lg">ABOUT</a>
+      <a href="contact.html" class="mx-4 text-lg">CONTACT</a>
+    </nav>
+  </div>
+  <div id="backdrop" class="fixed inset-0 bg-black opacity-50 hidden z-10"></div>
+
+  <!-- Hero Section (kept as is) -->
+  <section
+    id="hero"
+    class="relative w-full h-[80vh] md:h-screen flex items-center justify-center text-white overflow-hidden hero-bg"
+  >
+    <!-- Black overlay at 60% opacity -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-4">
+      <h2 class="text-6xl md:text-7xl font-bold">About Us</h2>
+      <p class="text-2xl mt-4">Celebrating the Heart of Youth Sports</p>
+    </div>
+  </section>
+
+  <!-- Introduction: What is Sideline Social? (white background, black text) -->
+  <section id="introduction" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-white text-black">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-6xl md:text-7xl font-bold text-center mb-8">What is Sideline Social?</h2>
+      <div class="text-2xl leading-relaxed">
+        At its core, Sideline Social celebrates the vibrant community that surrounds youth competitive sports. We understand that the true essence of team sports extends far beyond practice and game day—it lives in the early morning carpools, the weekend tournaments, and the post-game celebrations. These shared experiences forge unbreakable bonds between athletes, families, and supporters. Our premium apparel line serves as a tangible symbol of this unique culture, allowing everyone involved to showcase their dedication and team spirit in daily life.
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section (white background, black text, image removed) -->
+  <section id="our-story" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-white text-black">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-6xl md:text-7xl font-bold text-center mb-8">Our Story</h2>
+      <div class="text-2xl leading-relaxed">
+        Sideline Social was born from our family’s experience in competitive youth sports. With two kids playing baseball, basketball, flag football, gymnastics, and soccer, we've lived every aspect of this journey—navigating local games, cross-state road trips, and flights for national competitions. Like many families, we mastered the art of balancing work schedules with practices, game days, and travel weekends for separate kids.<br><br>
+        Our car became command central—a space for homework, quick meals between practices, and a space to sleep for late-night drives. We experienced the camaraderie of team families who carpooled together, sharing hotels in unfamiliar cities, and celebrating victories with post-game meals and activities.<br><br>
+        The idea for Sideline Social came from years of frustration with uninspiring, low-quality team merchandise. Despite our pride, we found ourselves wearing generic designs that didn’t match the excellence our kids displayed day in and day out. Families investing time and resources in youth sports deserved better than generic t-shirts with plain logos.<br><br>
+        We envisioned stylish, high-quality apparel that parents, siblings, and supporters would actually want to wear—pieces that transition from the sidelines to everyday life while reflecting the strength of our community. When we couldn’t find it, we created it.<br><br>
+        Sideline Social is a celebration of the unique culture surrounding youth sports. It’s about more than just team pride—it’s about honoring the lifestyle, the sacrifices, and the lifelong memories made on fields, in gyms, and along the sidelines. Our apparel serves
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission Section (white background, black text) -->
+  <section id="mission" class="w-full px-4 sm:px-6 md:px-24 py-32 bg-white text-black">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-6xl md:text-7xl font-bold mb-8">Our Mission</h2>
+      <p class="text-2xl text-left leading-relaxed">
+        Sideline Social embodies the heart and soul of competitive youth sports—the relationships, traditions, and shared experiences that transcend the field. Our mission is to honor the unwavering support of families, friends, and communities by creating quality apparel that reflects the strength, passion, and unity of the sports journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer (kept as is) -->
+  <footer class="py-6 px-4 sm:px-6 bg-gradient-black text-white text-center">
+    <div class="text-xl space-y-4">
+      <p>@shopsideline.social</p>
+      <p>
+        <a href="mailto:hello@shopsideline.social" class="text-blue-400 hover:text-blue-300">
+          hello@shopsideline.social
+        </a>
+      </p>
+      <p>&copy; 2025 Sideline Social</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const backdrop = document.getElementById('backdrop');
+
+    function openMenu() {
+      mobileMenu.classList.remove('-translate-y-full');
+      backdrop.classList.remove('hidden');
+      menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('-translate-y-full');
+      backdrop.classList.add('hidden');
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+
+    menuToggle.addEventListener('click', function() {
+      if (mobileMenu.classList.contains('-translate-y-full')) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    backdrop.addEventListener('click', closeMenu);
+  </script>
+</body>
+</html>
+
